@@ -80,7 +80,7 @@ export const getSimilarPosts = async (categories, slug) => {
     return result.posts;
 }
 
-export const getCategories = async () => {
+export const getCategories = async (slug) => {
     const query = gql `
         query GetCategories {
             categories {
