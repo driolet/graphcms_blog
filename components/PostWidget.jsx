@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { getRecentPosts, getSimilarPosts } from '../services';
 
+
 const PostWidget = ({ categories, slug }) => {
     const [relatedPosts, setRelatedPosts] = useState([]);
     useEffect(() => {
@@ -25,13 +26,13 @@ const PostWidget = ({ categories, slug }) => {
             </h3>
             {relatedPosts.map((post) => (
                 <div key={post.title} className="flex items-center w-full mb-4">
-                    <div className="w-16 flex-none">
+                    <div className="w-32 flex-none">
                         <img 
                             alt={post.title}
-                            height = "60px"
-                            width = "60px"
-                            className="align-middle rounded-full"
+                            height = "150px"
+                            className="align-middle"
                             src={post.featuredImage.url}
+                            
                          />
                     </div>
                     <div className="flex-grow ml-4">
